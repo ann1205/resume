@@ -1,0 +1,107 @@
+<div>
+    {{#with web}}
+        <section>
+            <h1>Languages:</h1>
+            <ol type="I">
+                {{#with languages}}
+                <li>
+                    <abbr>{{> title data=[0].name}}</abbr>
+                    <dfn>{{[0].description}}</dfn>
+                    <br>
+                    Version: ({{[0].version}})
+                    {{#with [0].elements}}
+                        <ol type="1"><b>Elements:</b>
+                            <li>
+                                <b>{{[0].name}}</b> - <dfn>{{[0].description}}</dfn>
+                                <br>
+                                <b>Atributs:</b>                                
+                                <ul>
+                                {{#each [0].attributes}}
+                                    <li><b>{{name}}</b> - <dfn>{{description}}</dfn></li>
+                                {{/each}}
+                                </ul>                                
+                            </li>
+                    
+                            <li>
+                                <b>{{[1].name}}</b> - <dfn>{{[1].description}}</dfn>
+                                <br>
+                                <b>Atributs:</b>                                
+                                <ul>
+                                {{#each [1].attributes}}
+                                    <li><b>{{name}}</b> - <dfn>{{description}}</dfn></li>
+                                {{/each}}
+                                </ul>
+                            </li>
+                        </ol>
+                    {{/with}}
+                </li>
+                <hr>
+
+                <li>
+                    <abbr>{{> title data=[1].name}}</abbr>
+                    <dfn>{{[1].description}}</dfn>
+                    <br>
+                    Version: ({{[1].version}})</li>
+                      {{#with [1].properties}}
+                        <ol type="1"><b>Properties:</b>
+                            <li>
+                                <b>{{[0].name}}</b> - <dfn>{{[0].description}}</dfn>
+                                <br>
+                                <b>Values:</b>                                
+                                <ul>
+                                {{#each [0].values}}
+                                    <li><b>{{value}}</b> - <dfn>{{description}}</dfn></li>
+                                {{/each}}
+                                </ul>                                
+                            </li>
+                    
+                            <li>
+                                <b>{{[1].name}}</b> - <dfn>{{[1].description}}</dfn>
+                                <br>
+                                <b>Values:</b>                                
+                                <ul>
+                                {{#each [1].values}}
+                                    <li><b>{{value}}</b> - <dfn>{{description}}</dfn></li>
+                                {{/each}}
+                                </ul>
+                            </li>
+                        </ol>
+                    {{/with}}
+                <hr>
+                <li>
+                    <abbr>{{> title data=[2].name}}</abbr>
+                    <dfn>{{[2].description}}</dfn>
+                    <br>
+                    Version: ({{[2].version}})</li>
+                    {{#with [2].functions}}
+                        <ol type="1"><b>Functions:</b>
+                            <li>
+                                <b>{{[0].name}}</b> - <dfn>{{[0].description}}</dfn>
+                                <br>
+                                <b>Parameters:</b>                                
+                                <ul>
+                                {{#each [0].parameters}}
+                                    <li><b>{{name}}</b> - <dfn>{{description}}, {{type}}</dfn></li>
+                                {{/each}}
+                                </ul>                                
+                            </li>
+                    
+                            <li>
+                                <b>{{[1].name}}</b> - <dfn>{{[1].description}}</dfn>
+                                <br>
+                                <b>Parameters:</b>                                
+                                <ul>
+                                {{#each [1].parameters}}
+                                    <li><b>{{name}}</b> - <dfn>{{description}}, {{type}}</dfn></li>
+                                {{/each}}
+                                </ul>
+                            </li>
+                        </ol>
+                    {{/with}}
+                {{/with}}
+
+            </ol>
+            
+        </section>
+    {{/with}}
+</div>
