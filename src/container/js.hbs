@@ -1,0 +1,86 @@
+<div>
+    <section>
+        <p class="h1">{{name}}</p>
+        <dfn>{{description}}</dfn>
+        {{#with history}}
+        <p><em>Was founded {{founder}} in {{year}}.</em></p>
+        {{/with}}
+        <br>
+        <p class="h2">Types:</p>
+        <ol class="list-group list-group-numbered">
+        {{#each types}}
+            <li class="list-group-item">{{this}}</li>    
+        {{/each}}
+        </ol>
+        <br>
+        <p class="h3">Syntax:</p>
+        {{#with syntax}}
+            <ol>
+                <li>Variables:
+                    {{#each variables}}
+                    <ul>
+                        <li>{{this}}</li>
+                    </ul>
+                    {{/each}}
+                </li>
+                <li>Functions:
+                    {{#each functions}}
+                    <ul>
+                        <li>{{this}}</li>
+                    </ul>
+                    {{/each}}
+                </li>
+                <li>Conditionals:
+                    {{#each conditionals}}
+                    <ul>
+                        <li>{{this}}</li>
+                    </ul>
+                    {{/each}}
+                </li>
+                <li>Loops:
+                    {{#each loops}}
+                    <ul>
+                        <li>{{this}}</li>
+                    </ul>
+                    {{/each}}
+                </li>
+                <li>Classes:
+                    {{#each classes}}
+                    <ul>
+                        <li>{{this}}</li>
+                    </ul>
+                    {{/each}}
+                </li>
+            </ol>
+        {{/with}}
+        <br>
+        <p class="h3">Types:</p>
+        <ol class="list-group list-group-numbered">
+        {{#each features}}
+            <li class="list-group-item">{{this}}</li>    
+        {{/each}}
+        </ol>
+        <br>
+        <p class="h3">Libraries:</p>
+        <ul>
+        {{#each libraries}}
+            <li>{{this}}</li>
+        {{/each}}
+        </ul>
+        <br>
+        <p class="h3">Tools:</p>
+        <ol class="list-group list-group-numbered">
+        {{#each tools}}
+            <li class="list-group-item">{{this}}</li>
+        {{/each}}
+        </ol>
+        <br>
+        <p class="h3">Community:</p>
+        {{#with community}}
+        <button type="button" class="btn btn-link">{{[0].type}} {{[0].name}}</button>
+        <button type="button" class="btn btn-link">{{[1].type}} {{[1].name}}</button>
+        <button type="button" class="btn btn-link">{{[2].type}} {{[2].name}}</button>
+        <button type="button" class="btn btn-link">{{[3].type}} {{[3].name}}</button>
+        {{/with}}
+    </section>
+</div>
