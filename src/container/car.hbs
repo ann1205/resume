@@ -1,0 +1,301 @@
+<div>
+  <section>
+    <p class='h1'>{{make}}
+      {{model}},
+      {{color}}
+      ({{year}})</p>
+    {{#with features}}
+      <p class='h1'>Features:</p>
+      <section>
+      
+        <p class='h2'>Interior</p>
+
+        {{#with interior}}
+
+          <div class='row'>
+            <div class='col-4'>
+              <div id='list-example' class='list-group'>
+                <a
+                  class='list-group-item list-group-item-action'
+                  href='#list-item-1'
+                >Seats</a>
+                <a
+                  class='list-group-item list-group-item-action'
+                  href='#list-item-2'
+                >Dashboard</a>
+                <a
+                  class='list-group-item list-group-item-action'
+                  href='#list-item-3'
+                >Audio</a>
+
+              </div>
+            </div>
+            <div class='col-8'>
+              <div
+                data-bs-spy='scroll'
+                data-bs-target='#list-example'
+                data-bs-smooth-scroll='true'
+                class='scrollspy-example'
+                tabindex='0'
+              >
+                {{#with seats}}
+                  <h4 id='list-item-1'>Seats</h4>
+                  <p>Material:
+                    {{material}}
+                    <br />
+                    Color:
+                    {{color}}
+                    <br />
+                    {{#if heated}}
+                      Heated
+                    {{/if}}
+                    <br />
+                    {{#if ventilated}}
+                      Ventilated
+                    {{/if}}
+                  </p>
+                {{/with}}
+                {{#with dashboard}}
+                  <h4 id='list-item-2'>Dashboard</h4>
+                  <p>
+                    Material:
+                    {{material}}
+                    <br />
+                    Color:
+                    {{color}}
+                    <br />
+                    {{#with display}}
+                      Type:{{type}}
+                      <br />
+                      Size:{{size}}
+                      <br />
+                      Resolution:
+                      {{resolution}}
+                      <br />
+                      {{#if touchscreen}}
+                        Touchscreen
+                      {{/if}}
+                    {{/with}}
+                  </p>
+                {{/with}}
+                {{#with audio}}
+                  <h4 id='list-item-3'>Audio</h4>
+                  <p>
+                    System:
+                    {{system}}
+                    <br />
+                    Speakers:
+                    {{speakers}}
+                    <br />
+                    {{#if subwoofer}}
+                      Subwoofer
+                    {{/if}}
+                    <br />
+                    {{#if bluetooth}}
+                      Bluetooth
+                    {{/if}}
+                    <br />
+                    {{#if USB}}
+                      USB
+                    {{/if}}
+                  </p>
+                {{/with}}
+              </div>
+            </div>
+          </div>
+        {{/with}}
+</section>
+<section>
+        {{#with exterior}}
+        <p class='h2'>Exterior</p>
+        <div class='row'>
+          <div class='col-4'>
+            <div id='list-example' class='list-group'>
+              <a class='list-group-item list-group-item-action' href='#list-item-4'>Wheels</a>
+              <a class='list-group-item list-group-item-action' href='#list-item-5'>Headlights</a>
+              <a class='list-group-item list-group-item-action' href='#list-item-6'>Sunroof</a>             
+            </div>
+          </div>
+          <div class='col-8'>
+            <div data-bs-spy='scroll' data-bs-target='#list-example' data-bs-smooth-scroll='true' class='scrollspy-example' tabindex='0'>
+                <h4 id='list-item-4'>Wheels</h4>
+                {{#with wheels}}
+                <p>
+                    Size: {{size}}
+                    <br>
+                    Type: {{type}}
+                    <br>
+                    Color: {{color}}
+                </p>
+                {{/with}}
+                <h4 id='list-item-5'>Headlights</h4>
+                {{#with headlights}}
+                <p>
+                    Type: {{type}}
+                    <br>
+                    Brightness: {{brightness}}
+                    <br>
+                    {{#if automatic}}
+                    Automatic
+                    {{/if}}
+                </p>
+                {{/with}}
+                <h4 id='list-item-6'>Sunroof</h4>
+                {{#with sunroof}}
+                <p>
+                    Type: {{type}}
+                    <br>
+                    Size: {{size}}
+                    <br>
+                    {{#if automatic}}
+                    Automatic
+                    {{/if}}
+                </p>
+                {{/with}}
+            </div>
+          </div>
+        </div>
+        {{/with}}
+        </section>
+
+        <section>
+        {{#with safety}}
+        <p class='h2'>Safety</p>        
+        <div class='row'>
+          <div class='col-4'>
+            <div id='list-example' class='list-group'>
+              <a class='list-group-item list-group-item-action' href='#list-item-7'>Airbags</a>
+              <a class='list-group-item list-group-item-action' href='#list-item-8'>Assistance</a>                           
+            </div>
+          </div>
+          <div class='col-8'>
+            <div data-bs-spy='scroll' data-bs-target='#list-example' data-bs-smooth-scroll='true' class='scrollspy-example' tabindex='0'>
+                <h4 id='list-item-7'>Airbags</h4>
+                {{#with airbags}}
+                <p>
+                    Front: {{front}}
+                    <br>
+                    Side: {{side}}
+                    <br>
+                    Knee: {{knee}}
+                    <br>
+                    Rear: {{rear}}
+                </p>
+                {{/with}}
+                <h4 id='list-item-8'>Assistance</h4>
+                {{#with assistance}}
+                <p>
+                    {{#if blind_spot_monitoring}}
+                        Blind spot monitoring
+                    {{/if}}
+                    <br>
+                    {{#if rear_cross_traffic_alert}}
+                        Rear cross traffic alert
+                    {{/if}}
+                    <br>
+                    {{#if lane_departure_warning}}
+                        Lane departure warning
+                    {{/if}}
+                    <br>
+                    {{#if adaptive_cruise_control}}
+                        Adaptive cruise control                    
+                    {{/if}}
+                    <br>
+                    {{#if collision_warning}}
+                        Collision warning
+                    {{/if}}
+                </p>
+                {{/with}}
+                
+            </div>
+          </div>
+        </div>
+        {{/with}}
+      </section>
+    {{/with}}
+
+    <p class='h2'>Engine:</p>
+    {{#with engine}}
+        <table class="table">            
+            <tbody>
+                <tr>
+                <th scope="row">Type:</th>
+                <td>{{type}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Displacement:</th>
+                <td>{{displacement}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Horsepower</th>
+                <td colspan="2">{{horsepower}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Torque</th>
+                <td colspan="2">{{torque}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Transmission</th>
+                {{#with transmission}}
+                <td colspan="2">{{type}} ({{gears}} gears)</td>
+                {{/with}}                
+                </tr>
+            </tbody>
+        </table>
+    {{/with}}
+    <br>
+    <p class='h2'>Fuel economy:</p>
+    {{#with fuel_economy}}
+        <table class="table">            
+            <tbody>
+                <tr>
+                <th scope="row">City:</th>
+                <td>{{city}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Highway:</th>
+                <td>{{highway}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Combined:</th>
+                <td colspan="2">{{combined}}</td>                
+                </tr>                
+            </tbody>
+        </table>
+    {{/with}}
+    <br>
+    <p class='h2'>Price:</p>
+    {{#with price}}
+        <table class="table">            
+            <tbody>
+                <tr>
+                <th scope="row">Base:</th>
+                <td>{{base}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Destination:</th>
+                <td>{{destination}}</td>                
+                </tr>                
+                {{#with options}}
+                <tr>
+                <th scope="row">Navigation:</th>
+                <td colspan="2">{{navigation}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Moonroof:</th>
+                <td colspan="2">{{moonroof}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Premium paint:</th>
+                <td colspan="2">{{premium_paint}}</td>                
+                </tr>
+                {{/with}}
+                <tr>
+                <th scope="row">Total:</th>
+                <td colspan="2">{{total}}</td>                
+                </tr>                                
+            </tbody>
+        </table>
+    {{/with}}
+  </section>
+</div>
