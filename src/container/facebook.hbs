@@ -1,0 +1,212 @@
+<div>
+    <section>
+        <p class='h1'>{{name}}
+            {{#with users}}
+                <div class="card" style="width: 25rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{[0].name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[0].id}})</h6>
+                    <p class="card-text">{{[0].gender}}, {{[0].age}}</p>
+                    <p><b>Friends:</b>
+                        {{#with [0].friends}}
+                            <div class="card" style="width: 20rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{[0].name}}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[0].id}})</h6>
+                                <p class="card-text">{{[0].gender}}, {{[0].age}}</p>
+                                <p><b>Mutual friends:</b></p>
+                                    {{#with [0].mutual_friends}}
+                                        <div class="card" style="width: 15rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{[0].name}}</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[0].id}})</h6>
+                                            <p class="card-text">{{[0].gender}}, {{[0].age}}</p>
+                                        </div>
+                                        </div>
+                                    {{/with}}
+
+                                </div>
+                            </div>
+                        
+                        <br>
+                        
+                            <div class="card" style="width: 20rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{[1].name}}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[1].id}})</h6>
+                                <p class="card-text">{{[1].gender}}, {{[1].age}}</p>
+                                <p><b>Mutual friends:</b></p>
+                                    {{#with [1].mutual_friends}}
+                                        <div class="card" style="width: 15rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{[0].name}}</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[0].id}})</h6>
+                                            <p class="card-text">{{[0].gender}}, {{[0].age}}</p>
+                                        </div>
+                                        </div>
+                                    {{/with}}
+                                </div>
+                            </div>
+                        {{/with}}
+                    </p>
+
+                <p><b>Groups:</b>
+                        {{#with [0].groups}}
+                            <div class="card" style="width: 20rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{[0].name}}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[0].id}})</h6>
+                                <p class="card-text">{{[0].description}}</p>
+                                <p><b>Members:</b></p>
+                                    {{#with [0].members}}
+                                        <div class="card" style="width: 15rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{[0].name}}</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[0].id}})</h6>
+                                            <p class="card-text">{{[0].gender}}, {{[0].age}}</p>
+                                        </div>
+                                        </div>
+                                    {{/with}}
+
+                                </div>
+                            </div>
+                        
+                            <br>
+                        
+                            <div class="card" style="width: 20rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{[1].name}}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[1].id}})</h6>
+                                <p class="card-text">{{[1].description}}</p>
+                                <p><b>Members:</b></p>
+                                    {{#with [1].members}}
+                                        <div class="card" style="width: 15rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{[0].name}}</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[0].id}})</h6>
+                                            <p class="card-text">{{[0].gender}}, {{[0].age}}</p>
+                                        </div>
+                                        </div>
+                                        <br>
+                                        <div class="card" style="width: 15rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{[1].name}}</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[1].id}})</h6>
+                                            <p class="card-text">{{[1].gender}}, {{[1].age}}</p>
+                                        </div>
+                                        </div>
+                                    {{/with}}
+                                </div>
+                            </div>
+                        {{/with}}
+                    </p>
+
+
+                </div>
+                </div>
+
+                <br>
+                <div class="card" style="width: 25rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{[1].name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[1].id}})</h6>
+                    <p class="card-text">{{[1].gender}}, {{[1].age}}</p>
+                    <p><b>Friends:</b>
+                    {{#with [1].friends}}
+                        <div class="card" style="width: 20rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{[0].name}}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[0].id}})</h6>
+                                <p class="card-text">{{[0].gender}}, {{[0].age}}</p>
+                                <p><b>Mutual friends:</b></p>
+                                    {{#with [0].mutual_friends}}
+                                        <div class="card" style="width: 15rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{[0].name}}</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[0].id}})</h6>
+                                            <p class="card-text">{{[0].gender}}, {{[0].age}}</p>
+                                        </div>
+                                        </div>
+                                        <br>
+                                        <div class="card" style="width: 15rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{[1].name}}</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[1].id}})</h6>
+                                            <p class="card-text">{{[1].gender}}, {{[1].age}}</p>
+                                            <p><b>Mutual friends:</b></p>
+                                            {{#with [1].mutual_friends}}
+                                        <div class="card" style="width: 10rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{[0].name}}</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[0].id}})</h6>
+                                            <p class="card-text">{{[0].gender}}, {{[0].age}}</p>
+                                        </div>
+                                        </div>
+                                            
+                                            {{/with}}
+                                        </div>
+                                        </div>
+                                    {{/with}}
+                                    <br>
+                                    <p><b>Groups:</b></p>
+                                    {{#with [0].groups}}
+                                        <div class="card" style="width: 15rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{[0].name}}</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[0].id}})</h6>
+                                            <p class="card-text">{{[0].description}}</p>
+                                            <p><b>Members:</b></p>
+                                                {{#with [0].members}}
+                                                    <div class="card" style="width: 10rem;">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">{{[0].name}}</h5>
+                                                        <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[0].id}})</h6>
+                                                        <p class="card-text">{{[0].gender}}, {{[0].age}}</p>
+                                                    </div>
+                                                    </div>
+                                                {{/with}}
+
+                                            </div>
+                                        </div>
+                                    
+                                        <br>
+                                    
+                                        <div class="card" style="width: 15rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{[1].name}}</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[1].id}})</h6>
+                                            <p class="card-text">{{[1].description}}</p>
+                                            <p><b>Members:</b></p>
+                                                {{#with [1].members}}
+                                                    <div class="card" style="width: 10rem;">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">{{[0].name}}</h5>
+                                                        <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[0].id}})</h6>
+                                                        <p class="card-text">{{[0].gender}}, {{[0].age}}</p>
+                                                    </div>
+                                                    </div>
+                                                    <br>
+                                                    <div class="card" style="width: 10rem;">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">{{[1].name}}</h5>
+                                                        <h6 class="card-subtitle mb-2 text-body-secondary">(id: {{[1].id}})</h6>
+                                                        <p class="card-text">{{[1].gender}}, {{[1].age}}</p>
+                                                    </div>
+                                                    </div>
+                                                {{/with}}
+                                            </div>
+                                        </div>
+                                    {{/with}}
+                                </p>                                     
+                                   
+
+                                </div>
+                            </div>
+                    {{/with}}
+                    
+
+                </div>
+                </div>
+            {{/with}}
+    </section>
+</div>
