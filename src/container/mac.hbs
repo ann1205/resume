@@ -1,0 +1,245 @@
+<div>
+    <section>
+        <p class='h1'>{{name}}
+        <p class='h2'>{{description}}
+        <p class='h3'>Price: {{price}} $
+        <p class='h4'>{{category}} 
+        <hr>        
+        {{#with features}}
+            <p class='h5'>Processor:
+            {{#with processor}}
+                <table class="table">            
+            <tbody>
+                <tr>
+                <th scope="row">Brand:</th>
+                <td>{{brand}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Model:</th>
+                <td>{{model}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Speed:</th>
+                <td colspan="2">{{speed}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Cores:</th>
+                <td colspan="2">{{cores}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Cache:</th>
+                <td colspan="2">{{cache}}</td>                
+                </tr>                
+            </tbody>
+        </table>
+        {{/with}}
+        <br>
+        <hr>
+        <p class='h5'>Memory:
+        {{#with memory}}
+            <table class="table">            
+            <tbody>
+                <tr>
+                <th scope="row">Type:</th>
+                <td>{{type}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Size:</th>
+                <td>{{size}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Speed:</th>
+                <td colspan="2">{{speed}}</td>                
+                </tr>                
+            </tbody>
+        </table>
+        {{/with}}
+        <br>
+        <hr>
+        <p class='h5'>Storage:
+        {{#with storage}}
+            <table class="table">            
+            <tbody>
+                <tr>
+                <th scope="row">Type:</th>
+                <td>{{type}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Size:</th>
+                <td>{{size}}</td>                
+                </tr>                               
+            </tbody>
+        </table>
+        {{/with}}
+        <br>
+        <hr>
+        <p class='h5'>Display:
+        {{#with display}}
+            <table class="table">            
+            <tbody>                
+                <tr>
+                <th scope="row">Size:</th>
+                <td>{{size}}</td>                
+                </tr>                
+                <tr>
+                <th scope="row">Resolution:</th>
+                <td>{{resolution}}</td>                
+                </tr>  
+                <tr>
+                <th scope="row">Technology:</th>
+                <td>{{technology}}</td>                
+                </tr>  
+                <tr>
+                <th scope="row">Color space:</th>
+                <td>{{color_space}}</td>                
+                </tr>  
+                <tr>
+                <th scope="row">Brightness:</th>
+                <td>{{brightness}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Refresh rate:</th>
+                <td>{{refresh_rate}}</td>                
+                </tr>                                 
+            </tbody>
+        </table>
+        {{/with}}
+        <br>
+        <hr>
+        <p class='h5'>Graphics:
+        {{#with graphics}}
+            <table class="table">            
+            <tbody>
+                <tr>
+                <th scope="row">Brand:</th>
+                <td>{{brand}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Model:</th>
+                <td>{{model}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Memory:</th>
+                <td colspan="2">{{memory}}</td>                
+                </tr>                
+            </tbody>
+        </table>
+        {{/with}}
+        <br>
+        <hr>
+        <p class='h5'>Ports:
+        {{#with ports}}
+            <table class="table">            
+            <tbody>
+                <tr>
+                <th scope="row">Type/count:</th>
+                <td>{{[0].type}} ({{[0].count}})</td>
+                <td>{{[1].type}} ({{[1].count}})</td>      
+                </tr>
+                <tr>
+                <th scope="row">Features:</th>
+                <td>
+                    <ul>
+                        {{#each [0].features}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </td>
+                <td></td>              
+                </tr>                
+                               
+            </tbody>
+        </table>
+        {{/with}}
+        <br>
+        <hr>
+        <p class='h5'>Battery:
+        {{#with battery}}
+            <table class="table">            
+            <tbody>
+                <tr>
+                <th scope="row">Type:</th>
+                <td>{{type}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Capacity:</th>
+                <td>{{capacity}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Life:</th>
+                <td colspan="2">{{life}}</td>                
+                </tr>                
+            </tbody>
+        </table>
+        {{/with}}
+        <br>
+        <hr>
+        <table class="table">            
+            <tbody>
+                <tr>
+                <th scope="row">Weight:</th>
+                <td>{{weight}}</td>                
+                </tr>                                              
+            </tbody>
+        </table>
+        <br>
+        <hr>
+        <p class='h5'>Dimensions:
+        {{#with dimensions}}
+            <table class="table">            
+            <tbody>
+                <tr>
+                <th scope="row">Height:</th>
+                <td>{{height}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Width:</th>
+                <td>{{width}}</td>                
+                </tr>
+                <tr>
+                <th scope="row">Depth:</th>
+                <td colspan="2">{{depth}}</td>                
+                </tr>                
+            </tbody>
+        </table>
+        {{/with}}
+
+        <br>
+        <hr>
+        <table class="table">            
+            <tbody>
+                <tr>
+                <th scope="row">Operating system:</th>
+                <td>{{operating_system}}</td>                
+                </tr>                                              
+            </tbody>
+        </table>
+        <br>
+        <hr>        
+        {{#with accessories}}
+            <table class="table">            
+            <tbody>
+                <tr>
+                <th scope="row">Accessories:</th>
+                <th>Price</th>                     
+                </tr>
+                
+                <tr>
+                <td scope="row">{{[0].name}}</td>
+                <td>{{[0].price}}</td>           
+                </tr>
+                <tr>
+                <td scope="row">{{[1].name}}</td>
+                <td>{{[1].price}}</td>           
+                </tr>
+                <tr>
+                <td scope="row">{{[2].name}}</td>
+                <td>{{[2].price}}</td>           
+                </tr>         
+            </tbody>
+        </table>
+        {{/with}}
+
+        {{/with}}
+    </section>
+</div>
