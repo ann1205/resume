@@ -1,0 +1,33 @@
+{{#with navigation}}
+        <div class="card my-5">
+            <div class="row">
+                <div class="col-8">
+                    <div class="card-body">
+                        <h1>{{Logo}}</h1>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-body">
+                        {{#with links}}                    
+                            <div class="row">                        
+                                <ul class="nav pe-0 my-2">
+                                    <li class="nav-item">
+                                        <a class="nav-link p-1 pe-0" aria-current="page" href="{{[0].href}}">{{[0].text}}</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link p-1 pe-0" href="{{[0].href}}">{{[1].text}}</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link p-1 pe-0" href="{{[0].href}}">{{[2].text}}</a>
+                                    </li>         
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled p-1 pe-0">Disabled</a>
+                                    </li>
+                                </ul>                        
+                            </div>                    
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/with}}

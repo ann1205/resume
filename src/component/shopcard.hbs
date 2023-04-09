@@ -1,0 +1,21 @@
+<h2 class="text-center">{{title}}</h2>            
+<div class="row">
+    {{#each cards}}
+    <div class="col-4 pe-1">                        
+        <div class="card my-3">                        
+            <img src="{{image}}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{title}}
+                    {{#if isHot}}
+                    <badge class="rounded-pill text-bg-warning text-uppercase">Hot!</badge>
+                    {{/if}}
+                    {{#if isNew}}
+                    <badge class="rounded-pill text-bg-primary">New</badge>
+                    {{/if}}
+                </h5>
+                <p class="card-text">{{description}}</p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
