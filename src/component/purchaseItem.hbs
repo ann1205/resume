@@ -1,0 +1,6 @@
+<tr>
+    <td scope="row" class="p-0">{{number}}<br><b>{{status}}</b></td>
+    <td class="p-0">{{#with amount}}{{title}}: <br><b>{{value}}</b>{{/with}}</td>
+    <td class="p-0">{{#each images}}<img src="{{this}}" width="75px" class="p-1">{{/each}}</td>
+    <td class="p-0">{{#with button}}<button class="btn {{#if isPrimary}}btn-primary{{/if}} my-3" href="{{link}}">{{text}}</button>{{/with}}</td>
+</tr>
