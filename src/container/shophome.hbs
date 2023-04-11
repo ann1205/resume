@@ -144,26 +144,7 @@
     <hr class="my-5">
     <section>
         {{#with subscribe}}
-        <div class="alert text-bg-dark" role="alert">
-            <div class="row">
-                <div class="col-7">     
-                    <h2>{{header}}</h2>
-                    <p>{{description}}</p>
-                </div>
-                {{#with buttons}}
-                <div class="col-5 py-4 pe-0">
-                    <div class="row pe-0">
-                        <div class="col-5 pe-0">
-                        <button class="btn btn-primary p-1" href="{{[0].link}}">{{[0].text}}</button>
-                        </div>
-                        <div class="col-6 pe-1">
-                        <button class="btn btn-primary p-1" href="{{[1].link}}">{{[1].text}}</button>
-                        </div>
-                    </div>
-                </div>
-                {{/with}}
-            </div>
-        </div>
+            {{> shopsubscribe}}
         {{/with}}
     </section>
     <hr class="my-5">

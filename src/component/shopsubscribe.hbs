@@ -1,0 +1,17 @@
+<div class="alert text-bg-dark" role="alert">
+    <div class="row">
+        <div class="col-7">     
+            <h2>{{header}}</h2>
+            <p>{{description}}</p>
+        </div>        
+        <div class="col-5 py-4 pe-0">                   
+            <div class="row">
+                {{#each buttons}}
+                    <div class="col-6">
+                        <button class="btn btn-primary p-1" href="{{link}}">{{text}}</button>
+                    </div>
+                {{/each}}
+            </div>            
+        </div>       
+    </div>
+</div>
