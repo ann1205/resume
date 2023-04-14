@@ -1,0 +1,101 @@
+<main>
+    <section>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                {{#each breadcrumb}}
+                {{#if @last}}
+                <li class="breadcrumb-item active">{{name}}</a></li>
+                {{else}}
+                <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li>
+                {{/if}}                        
+                {{/each}}
+            </ol>
+        </nav>
+    </section>
+    <section>
+        <h2 class="mt-5">{{header}}</h2>
+        <div class="row mt-4">
+            {{#each sortBlock}}
+            <div class="col-3">
+                <select class="form-select">
+                    <option selected>{{placeholder}}</option>
+                    {{#each options}}
+                    <option value="{{value}}">{{text}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+    <section>
+        <div class="row">
+            <div class="col-4">
+                <div class="card my-5">
+                    {{#with filterBlock}}
+                        {{#with sellers}}
+                        <p class="pt-2 ps-3">{{title}}</p>  
+                        {{#each list}}
+                            <div class="form-check ms-3">
+                                <input class="form-check-input" type="checkbox">                            
+                                <label class="form-check-label">
+                                    {{value}}
+                                </label>
+                            </div>                         
+                        {{/each}}
+                        <hr class="mx-3">
+                        {{/with}}                    
+                        {{#with brands}}                        
+                            <p class="pt-2 ps-3">{{title}}</p>
+                            <div class="col-10">
+                                <input class="form-control mx-3 mb-2" placeholder="{{input/placeholder}}">
+                            </div>
+                            {{#each options}}
+                                <div class="form-check ms-3 mt-2">
+                                    <input class="form-check-input" type="checkbox">                            
+                                    <label class="form-check-label">
+                                        {{value}}
+                                    </label>
+                                </div>                         
+                            {{/each}}
+                            <hr class="mx-3">                        
+                        {{/with}}
+                        {{#with price}}
+                            <p class="pt-2 ps-3">{{title}}</p>                            
+                            {{#each range}}
+                            <div class="col-10">
+                                <input class="form-control mx-3 mb-2" placeholder="{{this}}">                                
+                            </div>
+                            {{/each}}
+                            <div class="text-start">
+                                <button class="btn btn-outline-secondary m-3 px-3" href="{{button/link}}">{{button/text}}</button>
+                            </div>
+                        {{/with}}                        
+                        {{#each filterList}}
+                            <hr class="mx-3">
+                            <p class="pt-2 ps-3">{{title}}</p>
+                            {{#each options}} 
+                                <div class="form-check ms-3 pb-2">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">
+                                        {{value}}
+                                    </label>                                
+                                </div>
+                            {{/each}}                                                    
+                        {{/each}}
+                    {{/with}}
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="row mt-5">
+                    {{#each goodsList}}
+                        {{> catalogItem}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        {{> shopaction}}
+        <hr class="mt-5">
+    </section>
+</main>
